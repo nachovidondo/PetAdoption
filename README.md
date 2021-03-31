@@ -6,6 +6,8 @@ that's why  we also implemented a bank account to be able to offer the sending o
 
 The project is made in Django (backend), with Html, Css (front-end) and we will use SQL as a database.
 
-We will generate Applications in the project: 1) Responsible Adoption 2) About Us 3) Contact
+We will generate Applications in the project: 1) Responsible Adoption 
+                                              2) About Us 
+                                              3) Contact
 
 I will continue to explain this project as its getting progresses.
