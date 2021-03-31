@@ -109,3 +109,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'list_pet'
+LOGOUT_REDIRECT_URL = 'login'
