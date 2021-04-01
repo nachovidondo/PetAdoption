@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Pets', 'crispy_forms',
+    'Pets', 'crispy_forms','Contact'
 ]
 
 MIDDLEWARE = [
@@ -112,3 +112,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'list_pet'
 LOGOUT_REDIRECT_URL = 'login'
+
+EMAIL_BACKEND ="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER =  'huellitasresponsables@gmail.com'
+EMAIL_HOST_PASSWORD = 'Martina123'
