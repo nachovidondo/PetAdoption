@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Pets', 'crispy_forms', 
-    'Contact', 'AboutUs'
+    'Contact', 'AboutUs',
 ]
 
 MIDDLEWARE = [
@@ -118,5 +118,5 @@ EMAIL_BACKEND ="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER =  'huellitasresponsables@gmail.com'
+EMAIL_HOST_USER =  'huellitasresponsable@gmail.com'
 EMAIL_HOST_PASSWORD = 'Martina123'
