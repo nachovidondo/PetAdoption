@@ -1,9 +1,14 @@
 from django.shortcuts import render
 from .models import Pet
-from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView
+from django.views.generic import ListView, CreateView, DetailView, DeleteView, UpdateView, View
 from .forms import FormsPet
 from django.urls.base import reverse_lazy
 
+
+
+class Index(ListView):
+    model = Pet
+    template_name = 'index.html'
 
 
 class ListofPets(ListView):

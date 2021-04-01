@@ -9,7 +9,5 @@ urlpatterns = [
     path('pets/',include('Pets.urls')),
     path('login',LoginView.as_view(template_name ="login.html"),name ="login"),
     path('logout/',LogoutView.as_view(template_name ="login.html"), name="logout"),
-    path('contact/',include('Contact.urls')), 
-    
-
+    path('contact/',include('Contact.urls'), name="contact"), 
 ]

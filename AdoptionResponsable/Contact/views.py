@@ -15,7 +15,7 @@ def contact(request):
             email,     #from email
             ['ignaciovidondo@hotmail.com'], #to email
             )
-        return render(request,'contact.html',{'name': name })
+        return render(request,'Contact/contact.html',{'name': name })
     
     else:
-        return render(request, 'contact.html',{})
+        return render(request, 'Contact/contact.html',{})

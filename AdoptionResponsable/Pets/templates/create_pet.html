@@ -2,9 +2,8 @@
 
 <div>
 <form class method ="post">
-    {% csrf_token %} {{form|crispy }}
-
-
-    <button type="submit">Crear Mascota</button>
+    {% csrf_token %} 
+    {{form|crispy}}
+<button type="submit">Crear Mascota</button>
 </form>
 </div>
