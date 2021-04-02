@@ -51,24 +51,25 @@
       </div>
     </div>
   </div>
+  {% for pet in index %}
   <div class="gallery_section_2">
     <div class="container">
       <div class="row">
         <div class="col-sm-8">
-          <h1 class="pet_taital">Adopcion Responsable , se parte de una linda experiencia..</h1>
-          <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </p>
+          <h1 class="pet_taital">{{pet.title}}</h1>
+          <p class="lorem_text">{{pet.subtitle}}</p>
         <div class="banner_bt">
-        <button class="dog_bt">Read More</button>
+        <button class="dog_bt">Ver mas</button>
       </div>
-      <div class="box_3">
-        <h1 class="numbar">03</h1>
-      </div>
+   
         </div>
         <div class="col-sm-4">
           <div class="dog_img"><img src="{% static 'app/images/dog-img.png' %}" style="max-width: 100%;"></div>
         </div>
       </div>
     </div>
+    {% endfor %}
+
   </div>
 <!-- section gallery end -->
 {% endblock %}

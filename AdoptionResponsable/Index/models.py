@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Index(models.Model):
-    title = models.CharField(max_length=200, verbose_name="Titulo")
-    subtitle = models.TextField(verbose_name="Subtitulo")
-    image = models.ImageField(verbose_name="Imagenes")
+    title = models.CharField(max_length=200, verbose_name="Titulo", blank=True, null=True)
+    subtitle = models.TextField(verbose_name="Subtitulo", blank=True, null=True)
+    image = models.ImageField(verbose_name="Imagenes", blank=True, null=True)
     class Meta:
         verbose_name = "Index"
     def __str__(self):

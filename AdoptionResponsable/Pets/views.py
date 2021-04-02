@@ -5,12 +5,6 @@ from .forms import FormsPet
 from django.urls.base import reverse_lazy
 
 
-
-class Index(ListView):
-    model = Pet
-    template_name = 'index.html'
-
-
 class ListofPets(ListView):
     model = Pet
     template_name = 'list_pet.html'
