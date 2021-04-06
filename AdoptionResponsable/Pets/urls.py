@@ -12,5 +12,5 @@ urlpatterns = [
     path('detail_pet/<int:pk>/',login_required(DetailPet.as_view()), name='detail_pet'),
     path('delete_pet/<int:pk>/',login_required(DeletePet.as_view()), name="delete_pet"),
     path('update_pet/<int:pk>/',login_required(UpdatePet.as_view()), name='update_pet'),
-    path('index_admin', AdminList.as_view(), name="index_admin"),
+    path('admin_pet', AdminList.as_view(), name="admin_pet"),
 ]

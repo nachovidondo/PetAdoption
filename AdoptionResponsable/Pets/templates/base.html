@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>D-pot</title>
+<title>Huellitas Responsables</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">	
@@ -37,7 +37,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4">
-					<div><a href="index.html"><img src="{% static 'app/images/logo.png' %}"></a></div>
+                    <div><a href="{% url 'index' %}"><img src="{% static 'app/images/logo.png' %}"></a></div>
 				</div>
 				<div class="col-md-8">
 					<div class="menu_text">
@@ -48,7 +48,7 @@
                             <div class="overlay-content">
                                <a href="{% url 'index' %}">Inicio</a>
                                <a href="{% url 'about_us' %}">Acerca nuestro</a>
-                               <a href="{% url 'list_pet' %}">Galeria</a>
+                               <a href="{% url 'list_pet' %}">Mascotas Rescatadas </a>
                                <a href="{% url 'contact' %}">Contacto</a>
                             </div>
                             </div>
@@ -61,79 +61,43 @@
 		</div>
     </div>
     <body>
-    {% block content %}
-    
-    {% endblock %}
+    {% block content %}{% endblock %}
     </body>
 	<!-- section footer start -->
     <div class="section_footer">
-    	<div class="container">
-    		<div class="mail_section">
-    			<ul>
-    				<li class="footer-logo"><img src="{% static 'app/images/footer-logo.png' %}"></li>
-    				<li class="footer-logo"><img src="{% static 'app/images/map-icon.png' %}"><span class="map_text">Gb road 123 london Uk</span></li>
-    				<li class="footer-logo"><img src="{% static 'app/images/call-icon.png' %}"><span class="map_text">(+71) 9876543210</span></li>
-    				<li class="footer-logo"><img src="{% static 'app/images/email-icon.png' %}"><span class="map_text">Demo@gmail.com</span></li>
+            <div class="container">
+                <div class="mail_section">
+                    <ul>
+                        <li class="footer-logo"><img src="{% static 'app/images/footer-logo.png' %}"></li>
+                        <li class="footer-logo"><img src="{% static 'app/images/map-icon.png' %}"><span class="map_text">Cordoba, Argentina</span></li>
+                        <li class="footer-logo"><img src="{% static 'app/images/call-icon.png' %}"><span class="map_text">(+54) 9876543210</span></li>
+    				<li class="footer-logo"><img src="{% static 'app/images/email-icon.png' %}"><span class="map_text">huellitasresponsable@gmail.com</span></li>
     			</ul>
     	    </div> 
     	    <div class="footer_section_2">
 		        <div class="row">
     		        <div class="col-sm-6 col-md-6 col-lg-3">
-    		        	<h2 class="shop_text">About Pet Shop</h2>
-    		        	<p class="dummy_text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and </p>
+    		        	<h2 class="shop_text">Acerca Nuestro</h2>
+    		        	<p class="dummy_text">Somos personas que ayudamos a que los animales rescatados de la calle tengan tratamiento medico veterinario y un nuevo hogar </p>
     		        </div>
     		        <div class="col-sm-6 col-md-6 col-lg-3">
-    		        	<h2 class="shop_text">Useful Links</h2>
-    		        	<div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Pet Dictionary</span></div>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Help Links</span></div>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Pet Attitudes</span></div>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Call a Doctor</span></div>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Help a Pet</span></div>
-    		        </div>
-    		        <div class="col-sm-6 col-md-6 col-lg-3">
-    				    <h2 class="shop_text">Overview</h2>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Bacerim Dictionary</span></div>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Help Links</span></div>
-    				    <div class="image-icon"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">bacerim Attitudes</span></div>    				
-    		        </div>
-    			<div class="col-sm-6 col-md-6 col-lg-3">
-    				<h2 class="adderess_text">Instagram</h2>
-    				<div class="footer-img">
-    					<div class="row">
-    						<div class="col-sm-6">
-    							<div class="footer-img"><img src="{% static 'app/images/footer-img1.png' %}" style="width: 100%;"></div>
-    							<div class="footer-img"><img src="{% static 'app/images/footer-img2.png' %}" style="width: 100%;"></div>
-    						</div>
-    						<div class="col-sm-6">
-    							<div class="footer-img"><img src="{% static 'app/images/footer-img3.png' %}" style="width: 100%;"></div>
-    							<div class="footer-img"><img src="{% static 'app/images/footer-img4.png' %}" style="width: 100%;"></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
+    		        	<h2 class="shop_text">Nuestros Links</h2>
+    		        	<div class="image-icon"><a href="{% url 'index' %}"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Inicio</span></div></a>
+    				    <div class="image-icon"><a href="{% url 'about_us' %}"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Acerca Nuestro</span></div></a>
+    				    <div class="image-icon"><a href="{% url 'list_pet' %}"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Mascotas Rescatadas</span></div></a>
+    				    <div class="image-icon"><a href="{% url 'contact' %}"><img src="{% static 'app/images/bulit-icon.png' %}"><span class="pet_text">Contactanos</span></div></a>
+    				   </div>
+                    </div>
     			</div>
     	        </div>
-    	        <div class="social-icon">
-	        	    <div class="row">
-	        		    <div class="col-sm-12">
-	        			    <div class="icons">
-	        				    <ul>
-	        					    <li><a href="#"><img src="{% static 'app/images/fb-icon.png' %}"></a></li>
-	        					    <li><a href="#"><img src="{% static 'app/images/twitter-icon.png' %}"></a></li>
-	        					    <li><a href="#"><img src="{% static 'app/images/google-icon.png' %}"></a></li>
-	        					    <li><a href="#"><img src="{% static 'app/images/linkedin-icon.png' %}"></a></li>
-	        				    </ul>
-	        			    </div>
-	        		    </div>
-	        	    </div>
-	            </div>
-	            <div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html Templates</a></div>
+    
+	            <div class="copyright">2021 Todos los derechos reservados -  <a href="https://ignaciovidondo.pythonanywhere.com/">Ignacio Vidondo</a></div>
 	        </div>
     	</div>
     </div>
 	<!-- section footer end -->
 
-    <!-- Javascript files-->
+    <!-- Javascript files-->    
     <script src="{% static 'app/js/jquery.min.js' %}"></script>
     <script src="{% static 'app/js/popper.min.js' %}"></script>
     <script src="{% static 'app/js/bootstrap.bundle.min.js' %}"></script>

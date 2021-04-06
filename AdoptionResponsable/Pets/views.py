@@ -9,7 +9,7 @@ from django.urls.base import reverse_lazy
 class ListofPets(ListView):
     model = Pet
     template_name = 'list_pet.html'
-    context_object_name = 'pets'
+  
     
 class CreatePet(CreateView):
     model = Pet
@@ -36,6 +36,6 @@ class UpdatePet(UpdateView):
 #Administration
 class AdminList(ListView):
     model = Pet
-    template_name = 'index_admin.html'
+    template_name = 'admin_pet.html'
     context_object_name = 'pets'
     

@@ -1,10 +1,12 @@
   {% extends 'base.html' %}
   {% block content %}
-  {% for pe in pets %}
-  {% for pi in pe.petimages_set.all %}
-  <div class="item {% if forloop.first %} active {% endif %}">
-    <img  src="{{ pi.pe.image.url }}" alt="First slide">
-  </div>
-  {% endfor %}  
-  {% endfor %}  
-  {% endblock %}
+  {% for pet in object_list %}
+  {{pet.name}}
+  {% for pe in pe.petimages_set.all %}
+  <img class="" src="{{pi.image.url}}">
+  {% endfor %}   
+  {% endfor %}
+ {% endblock %}   
+
+
+

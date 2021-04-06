@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<h1>Administrador</h1>
+<table>
+    <thead>
+     <tr>
+         <th>Administracion de Mascotas</th>
+         <th> Administracion de Acerca Nuestro</th>
+     </tr>
+     </thead>
+     <tbody>
+        <tr>
+         <td><a href="{% url 'admin_pet' %}"></a></td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'admin_about' %}"></a></td>
+           </tr>
+       </tbody>
+ </table>

@@ -21,3 +21,8 @@ class EditAbout(UpdateView):
     template_name = "edit_about.html"
     form_class = FormAbout
     success_url = reverse_lazy('list_pet')
+    
+class AdminAbout(ListView):
+    model = About
+    template_name = "admin_about.html"
+    

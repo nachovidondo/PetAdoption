@@ -1,17 +1,9 @@
-/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext');
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
- ----------------------------------------*****/
 
-
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -20,7 +12,7 @@
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
-/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+    
 
 * {
      box-sizing: border-box !important;
@@ -228,7 +220,7 @@ a {
 }
 
 .numbar_text {
-    background-color: #f7941d;
+    background-color: #82104a24;;
     width: 10%;
     text-align: center;
     float: right;
@@ -296,11 +288,11 @@ a {
     border: 0px;
     color: #fff;
 }
-
-.gallery_main{
+.gallery_main
+{
 	width: 100%;
 	float: left;
-	background-color:#f7941d;
+	background-color:#82104a24;;
 	height: auto;
 }
 
@@ -363,7 +355,7 @@ a {
 .gallery_section_2{
 	width: 100%; 
 	float: left;
-	background-color: #ffffff;
+	background-color: #be2d2d;
 	height: auto;
 	padding-top: 100px;
 }
@@ -405,7 +397,7 @@ a {
 }
 
 .numbar{
-    background-color: #f7941d;
+    background-color: #82104a24;;
     width: 15%;
     text-align: center;
     float: left;
@@ -435,7 +427,7 @@ a {
 	width: 100%;
 	float: left;
 	text-align: center;
-	color: #f7941d;
+	color: #82104a24;;
 	font-size: 50pt;
     padding-bottom: 40px;
 
@@ -476,7 +468,7 @@ a {
 }
 
 button.main_bt {
-    background: #f7941d;
+    background: #82104a24;;
     border: none;
     color: #fff;
     width: 160px;
@@ -492,7 +484,7 @@ button.main_bt {
 .touch_section_2{
 	width: 100%; 
 	float: left;
-	background-color: #f7941d;
+	background-color: #82104a24;;
 	padding-top: 40px;	
 	padding-bottom: 40px;
 	height: auto;
@@ -738,4 +730,4 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.footer-logo{  }
+
