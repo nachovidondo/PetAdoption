@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Pet(models.Model):
     owner_options= (('Si','Si'),('No','No'))
     id = models.AutoField(primary_key=True)
@@ -16,13 +17,20 @@ class Pet(models.Model):
     image = models.ImageField(verbose_name="Imagenes", blank=True, null=True)
     create_date = models.DateTimeField(verbose_name="Fecha de Creacion",auto_now=True, blank=True, null=True)
     update_date = models.DateTimeField(verbose_name="Fecha de Modificacion",auto_now_add=True, blank=True, null=True)
-    
     class Meta:
         verbose_name = "Mascota"
         verbose_name_plural = "Mascotas"
-    
     def __str__(self):
-        return self.name
+        return str(self.name)
+    
+class PetImages(models.Model):
+    pet= models.ForeignKey(Pet, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to ="Imagenes",verbose_name="Imagenes") 
+    class Meta:
+        verbose_name="Agregar una Imagen"
+        verbose_name_plural="Agregar mas Imagenes"
+    def __str__(self):
+        return str(self.pet)
     
 
     

@@ -32,14 +32,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
 </head>
-
-<body>
-    {% block content %}
-
-{% endblock %}
-</body>
-
-	<!-- section banner start -->
+<!-- section banner start -->
 	<div class="header-main">
 		<div class="container-fluid">
 			<div class="row">
@@ -49,15 +42,13 @@
 				<div class="col-md-8">
 					<div class="menu_text">
 						<ul>
-							<li class="last">Log in/Register</li>
-							<li class="last"><img src="{% static 'app/images/search-icon.png' %}"></li>
-							<li class="active">
+                            <li class="active">
 							<div id="myNav" class="overlay">
                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
-                               <a href="index.html">Home</a>
+                               <a href="{% url 'index' %}">Inicio</a>
                                <a href="{% url 'about_us' %}">Acerca nuestro</a>
-                               <a href="gallery.html">Gallery</a>
+                               <a href="{% url 'list_pet' %}">Galeria</a>
                                <a href="{% url 'contact' %}">Contacto</a>
                             </div>
                             </div>
@@ -69,7 +60,11 @@
 			</div>
 		</div>
     </div>
-  
+    <body>
+    {% block content %}
+    
+    {% endblock %}
+    </body>
 	<!-- section footer start -->
     <div class="section_footer">
     	<div class="container">

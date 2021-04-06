@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Index(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo", blank=True, null=True)
     subtitle = models.TextField(verbose_name="Subtitulo", blank=True, null=True)
@@ -9,7 +10,6 @@ class Index(models.Model):
         verbose_name = "Index"
     def __str__(self):
         return self.title
-
 
 class IndexImages(models.Model):
     index = models.ForeignKey(Index, default =None ,on_delete=models.CASCADE)

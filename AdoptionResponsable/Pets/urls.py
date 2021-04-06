@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import  ListofPets, CreatePet, DetailPet, DeletePet, UpdatePet
+from .views import  (
+    ListofPets, CreatePet, DetailPet, DeletePet, UpdatePet, AdminList
+    )
 from django.contrib.auth.decorators import login_required
 
 
@@ -10,4 +12,5 @@ urlpatterns = [
     path('detail_pet/<int:pk>/',login_required(DetailPet.as_view()), name='detail_pet'),
     path('delete_pet/<int:pk>/',login_required(DeletePet.as_view()), name="delete_pet"),
     path('update_pet/<int:pk>/',login_required(UpdatePet.as_view()), name='update_pet'),
+    path('index_admin', AdminList.as_view(), name="index_admin"),
 ]

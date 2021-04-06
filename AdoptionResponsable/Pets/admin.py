@@ -1,5 +1,15 @@
 from django.contrib import admin
-from .models import Pet
+from .models import Pet, PetImages
 
 
-admin.site.register(Pet)
+class PetImagesAdmin(admin.StackedInline):
+    model = PetImages
+    
+    
+@admin.register(Pet)
+
+
+class PetAdmin(admin.ModelAdmin):
+    inlines=[PetImagesAdmin]
+
+
