@@ -25,18 +25,8 @@
                   {% endfor %}
                   </tbody>
             </table>
-            <a href="{% url 'create_pet' %}">Crear Mascota</a>
-        </div>
-      </div>
-    </div>
-</div>
-<div class="gallery_section_2">
-    <div class="container">
-     </div>
-        <div class="col-sm-4">
-        {% for abou in object_list %}
-              <a href="{% url 'edit_about' abou.id %}">Editar Acerca nuestro</a>
-        {% endfor %}
+            <br>
+            <a href="{% url 'create_pet' %}"><button>Crear Mascota</button></a>
         </div>
       </div>
     </div>

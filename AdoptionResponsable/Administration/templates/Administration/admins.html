@@ -1,18 +1,13 @@
 {% extends "base.html" %}
+{% block content %}
 <h1>Administrador</h1>
-<table>
-    <thead>
-     <tr>
-         <th>Administracion de Mascotas</th>
-         <th> Administracion de Acerca Nuestro</th>
-     </tr>
-     </thead>
-     <tbody>
-        <tr>
-         <td><a href="{% url 'admin_pet' %}"></a></td>
-        </tr>
-        <tr>
-            <td><a href="{% url 'admin_about' %}"></a></td>
-           </tr>
-       </tbody>
- </table>
+
+
+
+<ul>
+    <a href="{% url 'admin_pet' %}"><button><li>Administracion de Mascotas</li></button></a>
+    <a href="{% url 'admin_index' %}"><button><li>Administracion de Inicio</li></button></a>
+    <a href="{% url 'admin_about' %}"><button><li>Administracion de Acerca Nuestro</li></button></a>
+</ul>
+
+{% endblock %}
