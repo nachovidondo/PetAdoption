@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Pets', 'crispy_forms', 
-    'Contact', 'AboutUs', 'Index','Administration'
+    'Contact', 'AboutUs', 'Index','Administration',
+    'Users',
 ]
 
 MIDDLEWARE = [
@@ -89,7 +90,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+AUTH_USER_MODEL = 'Users.User'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -114,9 +115,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-LOGIN_REDIRECT_URL = 'list_pet'
-LOGOUT_REDIRECT_URL = 'login'
 
 EMAIL_BACKEND ="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
