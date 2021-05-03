@@ -57,36 +57,29 @@ Mi Perfil
                     <tr>
                         <td>Nombre</td>
                         <td>{{profile.first_name}}</td>
-                   
                     </tr>
                     <tr>
                         <td>Apellido</td>
                         <td>{{profile.last_name}}</td>
-                   
-                    </tr>
+                   </tr>
                     <tr>
                         <td>Bio</td>
                         <td>{{profile.bio}}</td>
-                   
-                    </tr>
+                   </tr>
                     <tr>
                         <td>Cantidad de amigos</td>
                         <td>{{profile.get_friends_no}}</td>
-                   
-                    </tr>
+                   </tr>
                     <tr>
                         <td>Amigos</td>
                         <td>
                             <ul>
-
-                            {% for friend in profile.get_friends %}
+                                {% for friend in profile.get_friends %}
                             <li>{{ friend }}</li>
-
                             {% endfor %}
                         </ul>
                     </td>
-                   
-                </tr>
+                    </tr>
                 </tbody>
             </table>
         </div>
