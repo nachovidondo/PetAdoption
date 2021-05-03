@@ -1,7 +1,0 @@
-<form method="POST">
-    {% csrf_token %}
-    <p>¿Desea eliminar de su lista a {{object.name}}?</p>
-    <a href="{% url 'index_admin' %} "><button type="submit">Confirmar</button></a>
-    <a href="{% url 'index_admin' %} "><button type="button ">Cancelar</button></a>
-
-</form> 
