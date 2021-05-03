@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Pets', 'crispy_forms', 
     'Contact', 'AboutUs', 'Index','Administration',
-    'Users',
+    'Profile',
 ]
 
 MIDDLEWARE = [
@@ -90,7 +90,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'Users.User'
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
