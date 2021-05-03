@@ -79,7 +79,20 @@ Mi Perfil
                             {% endfor %}
                         </ul>
                     </td>
+                      
                     </tr>
+                    <td>Cantidad de post</td>
+                    <td>{{profile.get_posts_no}}</td>
+                    <tr>
+                 
+                    <td>Cantidad de likes dados</td>
+                    <td>{{profile.get_likes_given_no}}</td>
+                   </tr>
+                   <tr>
+                 
+                    <td>Cantidad de likes recibidos</td>
+                    <td>{{profile.get_likes_received_no}}</td>
+                   </tr>
                 </tbody>
             </table>
         </div>

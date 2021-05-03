@@ -8,8 +8,8 @@ class Post(models.Model):
     image = models.ImageField(
         upload_to="post/", validators=[FileExtensionValidator(['png','jpg','jpeg'])],
                                        blank=True)
-    linked = models.ManyToManyField(
-        Profile,default=None,related_name='likes')
+    liked = models.ManyToManyField(
+        Profile,blank=True,related_name='likes')
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(Profile, 
@@ -23,6 +23,9 @@ class Post(models.Model):
     
     def num_likes(self):
         return self.linked.all().count()
+    
+    def num_comments(self):
+        return self.comment_set.all().count()
 
 
 
@@ -38,16 +41,17 @@ class Comment(models.Model):
 
 LIKE_CHOICES = (
     (
-        'Like','Like'
-    ), (
-        'Unlike','Unlike'
+        'Me gusta','Me gusta'
+    ),
+    (
+        'No me gusta','No me gusta'
     ),
 )
 
 class Like(models.Model):
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    value = models.CharField(choices=LIKE_CHOICES, max_length=8)
+    value = models.CharField(choices=LIKE_CHOICES, max_length=11)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     
