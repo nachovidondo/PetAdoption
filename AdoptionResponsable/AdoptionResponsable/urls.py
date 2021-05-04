@@ -14,7 +14,8 @@ urlpatterns = [
     path('contact/',include('Contact.urls')), 
     path('aboutus/',include('AboutUs.urls')),
     path('administration/',include('Administration.urls')),
-    path('profile/', include('Profile.urls'))
+    path('profile/', include('Profile.urls')),
+    path('posts/',include('Post.urls'))
 ]
 
 
