@@ -14,10 +14,18 @@
 
                 </div>
                 <div class="content">
-                    <form action="" method="POST">
+                    <form action="{% url 'liked' %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="post_id" value={{obj.id}}>
-                        <button type="submit" class="ui primary button">Me gusta</button>
+                        <button type="submit" class="ui primary button">
+                            {% if profile not in obj.liked.all %}
+                            <i class="thumbs up icon"></i>&nbsp;Me gusta
+                            {% else %}
+                            <i class="thumbs down icon"></i>&nbsp;No me gusta
+                            {% endif %}
+
+                        </button>
+                        &nbsp;{{obj.num_likes}}
                     </form>
                 
                 </div>
@@ -26,7 +34,7 @@
             {% endfor %}
         </div>
         <div class="five wide column">
-            Form
+           
         </div>
 
     </div>

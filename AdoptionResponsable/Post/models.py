@@ -22,7 +22,7 @@ class Post(models.Model):
         return str(self.content[:20])
     
     def num_likes(self):
-        return self.linked.all().count()
+        return self.liked.all().count()
     
     def num_comments(self):
         return self.comment_set.all().count()
