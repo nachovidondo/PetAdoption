@@ -74,7 +74,7 @@ def like_unlike_post(request):
 
 class PostDeleteView(DeleteView):
     model = Post
-    template_name = 'confirm_del.html'
+    template_name = 'Post/confirm_delete.html'
     success_url = reverse_lazy ('main')
     
     def get_object(self,*args,**kwargs):
@@ -88,10 +88,10 @@ class PostDeleteView(DeleteView):
 class PostUpdateView(UpdateView):
     model = Post
     form_class = PostModelForm
-    template_name = 'update.html'
+    template_name = 'Post/update.html'
     success_url = reverse_lazy('main')
     
-    def form_valid(self):
+    def form_valid(self,form):
         profile = Profile.objects.get(user=self.request.user)
         if form.instance.author == profile:
             return super().form_valid(form)

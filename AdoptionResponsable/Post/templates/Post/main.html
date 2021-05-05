@@ -13,8 +13,8 @@
                 <div class="ui grid">
                     <div class="row">
                         {% ifequal request.user obj.author.user %}
-                            <a href=""><button class="ui button bwhite-lg ">Editar</button></a>
-                            <a href=""><button class="ui button bwhite-lg ">Eliminar</button></a>
+                            <a href="{% url 'post-update' obj.pk %}"><button class="ui button bwhite-lg ">Editar</button></a>
+                            <a href="{% url 'post-delete' obj.pk %}"><button class="ui button bwhite-lg ">Eliminar</button></a>
                         {% endifequal %}
                     </div>
                 </div>
